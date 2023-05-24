@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    min-height: 100vh;
+    transition: background 1s;
+    
+
+}
+
+
+.change-mode {
+    background: rgb(71, 65, 65);
+}
+
+.change-mode .wrapper {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.change-mode .wrapper button {
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    background: linear-gradient(to bottom, rgb(250, 245, 245), rgba(240, 235, 235, 0.8));
+    color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.change-mode .wrapper button:active{
+    transform: scale(0.97);
+    border-bottom: 2px solid black ;
+    box-shadow: 0 2px 2px whitesmoke;
+}
+
+
+
+
+::selection{
+    color: #fff;
+    background: black;
+  }
+
+.wrapper {
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px 35px;
+    background: #FBFFF1;
+    border-radius: 15px;
+    /* z-index: 100; */
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+   
+}
+
+.wrapper .input-field{
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+  }
+
+.wrapper .content-box {
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    transition: all 300ms ease-in;
+    
+   
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 45px;
+}
+.logo img {
+    height: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  
+}
+
+.logo p {
+    color: grey;
+    font-family: Poppins;
+    margin-left: 5px;
+}
+
+.logo p span {
+    color: orange;
+    
+}
+
+.head .mode {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    padding: 6px;
+    color: rgb(185, 181, 181);
+    border-radius: 15px;
+    gap: 3px;
+    border: 1px solid rgb(185, 181, 181);
+
+}
+
+.head .mode span {
+    font-size: 20px;
+}
+
+.head .mode span.active  {
+    color: blueviolet;
+    border-radius: 50%;
+}
+
+
+.content-box .typing-text  {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-bottom: 50px;
+    
+
+}
+
+.typing-text::-webkit-scrollbar{
+    display: none;
+}
+
+
+.typing-text p{
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.typing-text p span{
+    position: relative;
+  }
+
+
+.typing-text p span.correct{
+    color: gray;
+  }
+.typing-text p span.incorrect{
+    color: #c60910;
+    outline: 1px solid #fff;
+    background: #ffc0cb;
+    border-radius: 4px;
+  }
+.typing-text p span.active{
+    color: #17A2B8;
+  }
+.typing-text p span.active::before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 5px;
+    background: #17A2B8;
+    animation: blink 1s ease-in-out infinite;
+  }
+
+@keyframes blink{
+    50%{ 
+      opacity: 1; 
+    }
+  }
+
+.content-box .content {
+    display: flex;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.content .result-details {
+    margin-bottom: 2px;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    
+
+}
+.content .result-details li {
+    height: 22px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.content .result-details li p{
+    font-size: 16px;
+
+}
+
+li span:first-child {
+    color: blueviolet;
+    font-size: 20px !important;
+    margin-right: 5px;
+}
+
+.result-details li:not(:first-child){
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+.result-details li span{
+    display: block;
+    font-size: 18px;
+    margin-left: 10px;
+    
+}
+
+.result-details li:not(:first-child) span {
+    font-weight: 500;
+}
+
+.result-details li b{
+    font-weight: 500;
+}
+
+.content button{
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    background: linear-gradient(to bottom, black, rgba(0,0,0,0.8));
+    color: whitesmoke;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+   
+}
+
+.content button:active{
+    transform: scale(0.97);
+    border-bottom: 2px solid #FBFFF1 ;
+    box-shadow: 0 2px 2px black;
+}
+
+.less {
+    color: red;
+    opacity: 0;
+    animation: blink 1s ease-in-out infinite;
+}
+
+

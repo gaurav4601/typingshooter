@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Star</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <div class="logo">
+                <img src="https://img.freepik.com/free-vector/hand-drawn-soldier-silhouette-illustration_23-2149484254.jpg?w=740&t=st=1684900459~exp=1684901059~hmac=164704f02db68f2080522200f8341b63366e37fe126b2bbf7ed995a94f7594e3" alt="logo">
+                <p>Typing<span>Shooter</span></p>
+            </div>
+
+            <div class="mode" id="toggle-mode">
+                <span class="material-symbols-outlined active">
+                    light_mode
+                </span>
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+                
+            </div>
+
+        </div>
+        <input type="text" class="input-field">
+        <div class="content-box">
+            <div class="typing-text">
+                <p></p>
+            </div>
+
+            <div class="content">
+                <ul class="result-details">
+                    <li class="time">
+                        <span class="material-symbols-outlined">timer</span>
+                        <p>Time Left</p>
+                        <span><b>60s</b></span>
+                    </li>
+                    <li class="mistakes">
+                        <span class="material-symbols-outlined">
+                            error
+                            </span>
+                        <p>Mistakes</p>
+                        <span><b>0</b></span>
+                    </li>
+                    <li class="wpm">
+                        <span class="material-symbols-outlined">
+                            av_timer
+                            </span>
+                        <p>WPM</p>
+                        <span><b>0</b></span>
+                    </li>
+                    <li class="cpm">
+                        <span class="material-symbols-outlined">
+                            function
+                            </span>
+                        <p>CPM</p>
+                        <span><b>0</b></span>
+                    </li>
+                </ul>
+                <button>Try Again</button>
+            </div>
+        </div>
+    
+    </div>
+    {% include "nav.html"%}
+
+
+ 
+    <script src="/static/script.js"></script>
+</body>
+</html>
